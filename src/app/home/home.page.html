@@ -7,15 +7,7 @@
 </ion-header>
 
 <ion-content>
-
-  <!--<video #video autoplay>-->
-  <!--</video>-->
-
   <a-scene embedded arjs *ngIf="ready">
-    <a-marker preset="hiro">
-      <a-box position='0 0.5 0' material='color: black;'></a-box>
-    </a-marker>
-    <a-entity camera></a-entity>
+      <a-gltf-model  position="1 1 -4" src="/assets/model/LibertStatue.gltf" ></a-gltf-model>
   </a-scene>
-
 </ion-content>

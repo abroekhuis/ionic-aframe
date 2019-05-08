@@ -18,48 +18,6 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-  <script>
-    console.log("TEST");
-
-    function onLoad() {
-        // console.log("TEST");
-        // document.addEventListener("deviceready", function () {
-        //     console.log('register globals');
-        //     cordova.plugins.iosrtc.registerGlobals();
-        //
-        //     // load adapter.js
-        //     // var script = document.createElement("script");
-        //     // script.type = "text/javascript";
-        //     // script.src = "js/adapter-latest.js";
-        //     // script.async = false;
-        //     // document.getElementsByTagName("head")[0].appendChild(script);
-        //
-        //     var pc = new window.RTCPeerConnection({
-        //         iceServers: []
-        //     });
-        //
-        //     console.log("ready!");
-        //
-        //     console.log(pc);
-        //
-        //     navigator.getUserMedia(
-        //         // constraints
-        //         {audio: true, video: true},
-        //         // success callback
-        //         function (stream) {
-        //             console.log('got local MediaStream: ', stream);
-        //
-        //             pc.addStream(stream);
-        //         },
-        //         // failure callback
-        //         function (error) {
-        //             console.error('getUserMedia failed: ', error);
-        //         }
-        //     );
-        // }, false);
-    }
-  </script>
-
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 
   <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
@@ -67,7 +25,7 @@
 
 </head>
 
-<body onLoad="onLoad()">
+<body>
   <app-root></app-root>
 </body>
 
