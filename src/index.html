@@ -7,6 +7,7 @@
 
   <base href="/" />
 
+  <meta http-equiv="Content-Security-Policy" content=" media-src * blob: ; script-src * data: blob: 'self' 'unsafe-inline' 'unsafe-eval'; connect-src * data: blob: http: https: 'self' 'unsafe-inline' 'unsafe-eval' http://*/* https://*/* https://*:* ">
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
@@ -16,9 +17,57 @@
   <!-- add to homescreen for ios -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <script>
+    console.log("TEST");
+
+    function onLoad() {
+        // console.log("TEST");
+        // document.addEventListener("deviceready", function () {
+        //     console.log('register globals');
+        //     cordova.plugins.iosrtc.registerGlobals();
+        //
+        //     // load adapter.js
+        //     // var script = document.createElement("script");
+        //     // script.type = "text/javascript";
+        //     // script.src = "js/adapter-latest.js";
+        //     // script.async = false;
+        //     // document.getElementsByTagName("head")[0].appendChild(script);
+        //
+        //     var pc = new window.RTCPeerConnection({
+        //         iceServers: []
+        //     });
+        //
+        //     console.log("ready!");
+        //
+        //     console.log(pc);
+        //
+        //     navigator.getUserMedia(
+        //         // constraints
+        //         {audio: true, video: true},
+        //         // success callback
+        //         function (stream) {
+        //             console.log('got local MediaStream: ', stream);
+        //
+        //             pc.addStream(stream);
+        //         },
+        //         // failure callback
+        //         function (error) {
+        //             console.error('getUserMedia failed: ', error);
+        //         }
+        //     );
+        // }, false);
+    }
+  </script>
+
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+
+  <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
+
 </head>
 
-<body>
+<body onLoad="onLoad()">
   <app-root></app-root>
 </body>
 

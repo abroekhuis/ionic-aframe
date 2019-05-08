@@ -1,5 +1,7 @@
 {
   "name": "WebRTC",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

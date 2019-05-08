@@ -7,8 +7,15 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+
+  <!--<video #video autoplay>-->
+  <!--</video>-->
+
+  <a-scene embedded arjs *ngIf="ready">
+    <a-marker preset="hiro">
+      <a-box position='0 0.5 0' material='color: black;'></a-box>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+
 </ion-content>
