@@ -8,8 +8,25 @@
 
 <ion-content>
 
-  <div *ngIf="ready">
-    <iframe src="assets/iframe/iframe.html"></iframe>
-  </div>
-  
+    <iframe src="assets/iframe/iframe.html" *ngIf="androidReady"></iframe>
+
+    <a-scene embedded arjs *ngIf="iosReady">
+      <!--<a-marker preset="hiro">-->
+      <!--<a-box position='0 0.5 0' material='color: black;'></a-box>-->
+      <!--</a-marker>-->
+      <!--<a-entity camera></a-entity>-->
+
+      <!-- define your markers -->
+      <!--<a-assets>-->
+      <!--<a-asset-item id="crate-obj" src="/assets/models/crate.obj"></a-asset-item>-->
+      <!--<a-asset-item id="crate-mtl" src="/assets/models/crate.mtl"></a-asset-item>-->
+      <!--</a-assets>-->
+
+      <!-- Using the asset management system. -->
+      <!--<a-entity obj-model="obj: #create-obj; mtl: #crate-mtl"></a-entity>-->
+
+
+      <a-gltf-model  position="1 1 -4" src="/assets/models/LibertStatue.gltf" ></a-gltf-model>
+    </a-scene>
+
 </ion-content>

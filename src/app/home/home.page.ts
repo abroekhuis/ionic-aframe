@@ -12,7 +12,8 @@ declare var cordova;
 })
 export class HomePage {
 
-    ready = false;
+    androidReady = false;
+    iosReady = false;
 
     constructor(
         private platform: Platform,
@@ -57,7 +58,12 @@ export class HomePage {
 
             console.log('nav' + navigator.mediaDevices);
             this.splashScreen.hide();
-            this.ready = true;
+
+            if (this.platform.is('ios')) {
+                this.iosReady = true;
+            } else {
+                this.androidReady = true;
+            }
         });
     }
 }
