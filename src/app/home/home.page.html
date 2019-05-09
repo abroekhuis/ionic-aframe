@@ -7,7 +7,9 @@
 </ion-header>
 
 <ion-content>
-  <a-scene embedded arjs *ngIf="ready">
-      <a-gltf-model  position="1 1 -4" src="/assets/model/LibertStatue.gltf" ></a-gltf-model>
-  </a-scene>
+
+  <div *ngIf="ready">
+    <iframe src="assets/iframe/iframe.html"></iframe>
+  </div>
+  
 </ion-content>
